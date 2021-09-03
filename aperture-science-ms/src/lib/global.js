@@ -9,6 +9,16 @@ module.exports = {
       id: "",
       username: "",
       password: ""
+    },
+    testSubject: {
+      id: "",
+      SubjectId: "",
+      username: "",
+      TestChamber: "",
+      DateOfBirth: "",
+      TotalScore: "",
+      Alive: "",
+      password: ""
     }
   }
 };

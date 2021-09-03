@@ -17,18 +17,18 @@ import global from "../lib/global";
 
 //Import page styles:
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './FacilitatorLogin.css';
+import './testSubjectLogin.css';
 
 //Import images:
 import ApertureScienceLogo from './images/loginBG.png';
 
 //Create the interface:
-class HomeScreen extends Component {
+class testSubjectLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
       redirectToReferrer: false,
-      isFacilitator: false,
+      isTestSubject: false,
       modal: false,
 
       submitHeader: "",
@@ -38,7 +38,6 @@ class HomeScreen extends Component {
       password: "",
       usernameValid: false,
       passwordValid: false
-
     };
 
     //Bind functions for state variable use:
@@ -52,7 +51,7 @@ class HomeScreen extends Component {
 
   //Set the page title:
   componentDidMount(){
-    document.title = "Aperture Science Management System";
+    document.title = "Aperture Science Management System - Test Subject Login";
   }
 
   //Toggle the message:
@@ -124,7 +123,7 @@ class HomeScreen extends Component {
       data.append('Password', this.state.password);
       
       //Make the request:
-      var requestURL = global.state.backendServerAddress + 'login.php';
+      var requestURL = global.state.backendServerAddress + 'testSubjectLogin.php';
       this.serverReq(requestURL, this.isLoggedIn, data);
 
     }else{
@@ -155,19 +154,24 @@ class HomeScreen extends Component {
 
   }
 
-  //Log the user in:
-  isLoggedIn(response){
+   //Log the user in:
+   isLoggedIn(response){
 
     //Check if the response is ok:
     if(response.Status === "OK"){
       
       //Add user data to session:
-      global.state.facilitator.id = response.id;
-      global.state.facilitator.username = response.username;
-      global.state.facilitator.password = response.password;
+      global.state.testSubject.id  = response.id;
+      global.state.testSubject.SubjectId  = response.SubjectId;
+      global.state.testSubject.username  = response.Username;
+      global.state.testSubject.TestChamber  = response.TestChamber;
+      global.state.testSubject.DateOfBirth  = response.DateOfBirth;
+      global.state.testSubject.TotalScore  = response.TotalScore;
+      global.state.testSubject.Alive  = response.Alive;
+      global.state.testSubject.password  = response.Password;
 
       //Log the user in as a facilitator:
-      this.facilitatorLogin();
+      this.testSubjectLogin();
 
     }else if(response.Status === 'NO'){
 
@@ -197,7 +201,7 @@ class HomeScreen extends Component {
   }
 
   //Facilitator Login:
-  facilitatorLogin = () => {
+  testSubjectLogin = () => {
 
     //Authenticate the user:
     Auth.authenticate(() => {
@@ -211,28 +215,26 @@ class HomeScreen extends Component {
   
   render() {
 
-    //Prep for facilitator login:
-    const { facilitatorDashboard } = this.props.location.state || { facilitatorDashboard: { pathname: '/facilitator/Dashboard' } }
+    //Prep for test subject login:
+    const { testSubjectDashboard } = this.props.location.state || { testSubjectDashboard: { pathname: '/testsubject/Dashboard' } }
     
      //Setup referrer:
     const { redirectToReferrer } = this.state
 
-    //If the user is a facilitator:
+    //If the user is a test subject:
     if(this.state.isFacilitator){
 
       //If the refer is enabled:
       if (redirectToReferrer === true) {
 
-        //Redirect the user to the facilitator dashboard:
-        return <Redirect to={facilitatorDashboard} />
+        //Redirect the user to the test subject dashboard:
+        return <Redirect to={testSubjectDashboard} />
 
       }
     }
 
-    //Render the interface:
     return (
       <div>
-
         <Modal isOpen={this.state.modal} toggle={this.messageToggle} className='GenericModal'>
           <ModalHeader toggle={this.messageToggle}>{this.state.submitHeader}</ModalHeader>
           <ModalBody>{this.state.submitBody}</ModalBody>
@@ -247,10 +249,10 @@ class HomeScreen extends Component {
           </div>
           <div className='LoginDivision'>
             <div className='LoginFormCont'>
-              <h3 className='loginHeading'>Facilitator Login</h3>
+              <h3 className='loginHeading'>Test Subject Login</h3>
               <Form className='LoginForm'>
                 <Label for='usrEmail' />
-                <Input className='loginInput' id='usrEmail' name='usrEmail' placeholder='Facilitator Username' type='text' onChange={this.usernameInputChange.bind(this)} />
+                <Input className='loginInput' id='usrEmail' name='usrEmail' placeholder='Test Subject Username' type='text' onChange={this.usernameInputChange.bind(this)} />
 
                 <Label for='usrPassword' />
                 <Input className='loginInput' id='usrPassword' name='usrPassword' placeholder='Password' type='password' onChange={this.passwordInputChange.bind(this)} />
@@ -265,4 +267,4 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen;
+export default testSubjectLogin;

@@ -6,6 +6,7 @@ import Home from './Home/Home';
 import facilitatorLogin from './FacilitatorLogin/FacilitatorLogin';
 import testSubjectLogin from './testSubjectLogin/testSubjectLogin';
 import facilitatorDashboard from './facilitatorDashboard/facilitatorDashboard';
+import testSubjectDashboard from './testSubjectDashboard/testSubjectDashboard';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <div>
         <PrivateRoute exact path='/facilitator/Dashboard' component={facilitatorDashboard} />
+        <PrivateRoute exact path='/testsubject/Dashboard' component={testSubjectDashboard} />
         <Route exact path="/" component={Home} />
         <Route exact path="/facilitatorLogin" component={facilitatorLogin} />
         <Route exact path="/testSubjectLogin" component={testSubjectLogin} />
