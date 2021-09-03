@@ -247,7 +247,7 @@ class HomeScreen extends Component {
           </div>
           <div className='LoginDivision'>
             <div className='LoginFormCont'>
-              <h3 className='loginHeading'>Please Login below.</h3>
+              <h3 className='loginHeading'>Facilitator Login</h3>
               <Form className='LoginForm'>
                 <Label for='usrEmail' />
                 <Input className='loginInput' id='usrEmail' name='usrEmail' placeholder='Facilitator Username' type='text' onChange={this.usernameInputChange.bind(this)} />
