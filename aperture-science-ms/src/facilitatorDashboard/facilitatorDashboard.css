@@ -1,0 +1,69 @@
+.facilitatorDashPageContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
+.facilitatorDashNavigation{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 20vw;
+    background: black;
+    opacity: 0.8;
+}
+
+.facilitatorDashNavLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.facilitatorDashNavBTN{
+    color: white;
+}
+
+.facilitatorDashNavBTN:hover{
+    color: white;
+    background: grey;
+}
+
+.facilitatorDashActiveNavBTN{
+    background: grey;
+    color: white;
+}
+
+.facilitatorDashActiveNavBTN:hover{
+    background: grey;
+    color: white;
+}
+
+.facilitatorDashMainPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    width: 80vw;
+}
+
+.facilitatorAccountControls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 7vh;
+    width: 80vw;
+    background: black;
+    opacity: 0.8;
+}
+
+.accountDropdown{
+    color: white;
+    margin-right: 3%;
+}
