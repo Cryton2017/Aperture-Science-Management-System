@@ -10,7 +10,7 @@ This application has been developed using the following:
 | Framework/Language |    For    |                                                                                               Reason                                                                                                | Substitute |
 |--------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 |       React        | Front End | As stated in the instructions, react is used by intelliHR for front end development.                                                                                                        |    None     |
-|        PHP         | Back End  | As stated in the instructions, PHP is used for the back end, though the framework is Laraval.I am confident that with more time, I could have toaught myself enough Laraval to create my solution.               | PHP Laraval  |
+|        PHP         | Back End  | As stated in the instructions, PHP is used for the back end, though the framework is Laraval.I am confident that with more time, I could have taught myself enough Laraval to create my solution.               | PHP Laraval  |
 |       MySQL        | Database  | Although it has been stated that intelliHR use Postgres, I used MySQl as it was already configured. I am confident that with more time, I would have been able to configure a Postgress Database Server.    |    Postgres |
 
 ---
@@ -41,7 +41,7 @@ The above table depicts the order in which I would implement the remaining user 
 ---
 
 ### Testing
-Testing is an importnat part of software development. I have conducted interface testing and user testing. I have not conudcted unit testing. In my previous experience, I have performed unit testing using JUnit. I have not had the ooportunity to develop my skills in Unit Testing for PHP or React. I am confident that I can quickly aquire these skills.
+Testing is an important part of software development. I have conducted interface testing and user testing. I have not conducted unit testing. In my previous experience, I have performed unit testing using JUnit. I have not had the opportunity to develop my skills in Unit Testing for PHP or React. I am confident that I can quickly aquire these skills.
 
 ### Other Notes
-Implementing user stories that involve user inputs requries more time in my opinion as both client side and server side data validation are required for security purposes. I was more generous with the time for the final two user stories as I would need to conduct research and find tutorials on how to implement unit tests for PHP and React along with using Docker to containerise the application.
+Implementing user stories that involve user inputs requires more time in my opinion as both client side and server side data validation are required for security purposes. I was more generous with the time for the final two user stories as I would need to conduct research and find tutorials on how to implement unit tests for PHP and React along with using Docker to containerise the application.
