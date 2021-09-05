@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Aperture Science Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application has been created to assist Aperture Science keep track of its test subjects and to administer questionaires
+more easily.
 
-## Available Scripts
+This application has been developed using the following:
 
-In the project directory, you can run:
+---
 
-### `npm start`
+| Framework/Language |    For    |                                                                                               Reason                                                                                                | Substitute |
+|--------------------|-----------|
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+|       React        | Front End | As stated in the instructions, react is used by intelliHR for front end development.                                                                                                        |    None     |
+|        PHP         | Back End  | As stated in the instructions, PHP is used for the back end, though the framework is Laraval.I am confident that with more time, I could have toaught myself enough Laraval to create my solution.               | PHP Laraval  |
+|       MySQL        | Database  | Although it has been stated that intelliHR use Postgres, I used MySQl as it was already configured. I am confident that with more time, I would have been able to configure a Postgress Database Server.    |    Postgres |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### User Stories Implemented
+| ID | Story Description                                                                                                             | Priority    | Details                                                                 |
+|----|-------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------------------------------------------------|
+| 1  | As GLaDOS, I can log in to the application                                                                                    | Must have   | Login requires username and password                                    |
+| 2  | As a Subject, I can log in to the application                                                                                 | Must have   | Login requires test subject ID and password                             |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Stories to implement (in order)
+| ID | Story Description                                                                                                             | Priority    | Details                                                                 |  Time to Complete  |
+|----|-------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------------------------------------------------|-------------------|
+| 3  | As GLaDOS, I can edit the questions in the questionnaire                                                                      | Could have  |                                                                         |   1 hour          |
+| 4  | As a Subject, I can submit testing data (questionnaires)                                                                      | Must have   | Must capture date,      Testing data based on stored testing parameters |   2 hours         |
+| 6  | As a Subject, I can only view my own testing data (historical   questionnaire submissions)                                    | Must have   |                                                                         |   1 hour          |
+| 5  | As GLaDOS, I can view all test subjects' data                                                                                 | Must have   |                                                                         |   0.5 hours       |
+| 7  | As GLaDOS, I can ~~capture~~ register new test subjects                                                                       | Should have | Maximum of 10 subjects alive at once.                                   |   2 hours         |
+| 8  | As GLaDOS, I can filter and sort test subjects based on their metadata                                                        | Should have |                                                                         |   3 hours         |
+| 9  | As a facility manager, I can retrieve the Subject Number of the subject   that has submitted the most data and is still alive | Could have  | Must be via API with basic authorization                                |   1 hour          |
+| 10 | As a facility manager, I can test the new testing management system (unit   tests)                                            | Could have  |                                                                         |   4 hours         |
+| 11 | As a facility manager, I can deploy the new system in a docker container                                                      | Could have  |                                                                         |   2 hours         |
 
-### `npm run build`
+The above table depicts the order in which I would implement the remaining user stories and the time I feel it would take.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Testing
+Testing is an importnat part of software development. I have conducted interface testing and user testing. I have not conudcted unit testing. In my previous experience, I have performed unit testing using JUnit. I have not had the ooportunity to develop my skills in Unit Testing for PHP or React. I am confident that I can quickly aquire these skills.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Other Notes
+Implementing user stories that involve user inputs requries more time in my opinion as both client side and server side data validation are required for security purposes. I was more generous with the time for the final two user stories as I would need to conduct research and find tutorials on how to implement unit tests for PHP and React along with using Docker to containerise the application.
