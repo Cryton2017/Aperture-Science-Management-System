@@ -14,6 +14,9 @@ This application has been developed using the following:
 |        PHP         | Back End  | As stated in the instructions, PHP is used for the back end, though the framework is Laraval.I am confident that with more time, I could have toaught myself enough Laraval to create my solution.               | PHP Laraval  |
 |       MySQL        | Database  | Although it has been stated that intelliHR use Postgres, I used MySQl as it was already configured. I am confident that with more time, I would have been able to configure a Postgress Database Server.    |    Postgres |
 
+### Database
+I decided to use an already established mySQL database. This database is an AWS RDS instance.
+
 ---
 
 ### User Stories Implemented
@@ -45,4 +48,4 @@ The above table depicts the order in which I would implement the remaining user 
 Testing is an importnat part of software development. I have conducted interface testing and user testing. I have not conudcted unit testing. In my previous experience, I have performed unit testing using JUnit. I have not had the ooportunity to develop my skills in Unit Testing for PHP or React. I am confident that I can quickly aquire these skills.
 
 ### Other Notes
-Implementing user stories that involve user inputs requries more time in my opinion as both client side and server side data validation are required for security purposes. I was more generous with the time for the final two user stories as I would need to conduct research and find tutorials on how to implement unit tests for PHP and React along with using Docker to containerise the application.
+Implementing user stories that involve user inputs requries more time in my opinion as both client side and server side data validation are required for security purposes. I was more generous with the time for the final two user stories as I would need to conduct research and find tutorials on how to implement unit tests for PHP and React along with using Docker to containerise the application. In config.php, I have removed the database username and password as this is a public repository. Although it is best to leave the build folder out of version control, I decided to commit it in this instance so that it would be easier to deploy and test the solution.
